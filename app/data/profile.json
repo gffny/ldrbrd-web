@@ -1,4 +1,16 @@
 {
-	"name": "John D. Gaffney",
-	"handicap": 19
+    "id": "8ab69aed-cd83-4a44-81ec-f04d3e61cb2d",
+    "profileHandle": "gffny",
+    "firstName": "John",
+    "lastName": "Gaffney",
+    "emailAddress": "john@gffny.com",
+    "profileImageRef": "http://distilleryimage7.s3.amazonaws.com/26adcca2488511e3aec5128fd569807c_8.jpg",
+    "lastLogin": 1394388398000,
+    "failedLoginAttemptsCount": 0,
+    "handicap": 13,
+    "golfBag": [],
+    "handedness": "RIGHT",
+    "handDominanceValue": "RIGHT",
+    "enabled": true,
+    "lastLoginDT": 1394388398000
 }

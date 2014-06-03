@@ -1,5 +1,78 @@
 <div>
-	{{profile.name}}
+	<!-- image -->
+	<div ng-if="profile.profileImageRef">
+		<img ng-src="{{profile.profileImageRef}}" />
+	</div>
+	<!-- names -->
+	<div ng-if="profile.firstName && profile.lastName && profile.profileHandle">
+		<h3>Name Details</h3>
+		<!-- name -->
+		<span>
+			<span>Golfer Name</span>&nbsp;
+			<span>{{profile.firstName}} {{profile.lastName}}</span>
+		<br />
+		</span>
+		<!-- handle -->
+		<span>
+			<span>Profile Handle</span>&nbsp;
+			<span>{{profile.profileHandle}}</span>
+		<br />
+		</span>
+	</div>
 
-	{{profile.handicap}}
+	<!-- contact -->
+	<div ng-if="profile.emailAddress || profile.twitterHandle || profile.facebookUsername || profile.instagramHandle || profile.pinterestHandle">
+		<h3>Contact Details</h3>
+		<!-- email -->
+		<span ng-if="profile.emailAddress">
+			<span>Email Address</span>&nbsp;
+			<span>{{profile.emailAddress}}</span>
+		<br />
+		</span>
+		<!-- twitter handle -->
+		<span ng-if="profile.twitterHandle">
+			<!-- twitter logo -->
+			<span>Twitter Handle</span>&nbsp;
+			<span>{{profile.twitterHandle}}</span>
+		<br />
+		</span>
+		<!-- facebook -->
+		<span ng-if="profile.facebookUsername">
+			<!-- facebook logo -->
+			<span>Facebook</span>&nbsp;
+			<span>{{profile.facebookUsername}}</span>
+		<br />
+		</span>
+		<!-- instagram -->
+		<span ng-if="profile.instagramHandle">
+			<!-- instagram logo -->
+			<span>Instagram Handle</span>&nbsp;
+			<span>{{profile.instagramHandle}}</span>
+		<br />
+		</span>
+		<!-- pinterest -->
+		<span ng-if="profile.pinterestHandle">
+			<!-- pinterest logo -->
+			<span>Pinterest Handle</span>&nbsp;
+			<span>{{profile.pinterestHandle}}</span>
+		<br />
+		</span>
+	</div>
+
+	<!-- golf info -->
+	<div ng-if="profile.handDominanceValue || profile.handicap || profile.golfbag">
+		<h3>Golf Info</h3>
+		<!-- handedness -->
+		<span ng-if="profile.handDominanceValue">
+			<span>Hand Dominance</span>&nbsp;
+			<span>{{profile.handDominanceValue}}</span>
+		<br />
+		</span>
+		<!-- handicap -->
+		<span ng-if="profile.handicap">
+			<span>Handicap</span>&nbsp;
+			<span>{{profile.handicap}}</span>
+		<br />
+		</span>
+	</div>
 </div>
