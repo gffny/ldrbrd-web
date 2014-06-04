@@ -1,1 +1,28 @@
-/* app css stylesheet */
+/*-------------------------------------------
+		Profile
+-------------------------------------------*/
+.profile img {
+  vertical-align: middle;
+  height: 100px;
+  width: 100px;
+}
+.profile h3 {
+  text-transform: uppercase;
+}
+.profile span.title {
+  font-weight: bold;
+}
+/*-------------------------------------------
+		Menu
+-------------------------------------------*/
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  display: block;
+  width: 100px;
+  background-color: green;
+  text-color: white;
+}
