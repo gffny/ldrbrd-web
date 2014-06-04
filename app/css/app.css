@@ -8,21 +8,48 @@
 }
 .profile h3 {
   text-transform: uppercase;
+  margin-top: 0px;
 }
 .profile span.title {
   font-weight: bold;
+  margin-top: 10px;
+}
+.profile span.profileBlock span {
+  display: block;
+}
+.profile .profileSummaryCard {
+  height: 400px;
+  padding-left: 15px;
+  vertical-align: top;
+  float: left;
+}
+.profile .profileSummaryCard div span {
+  display: block;
+}
+.profile .profileSummaryCard .nameDisplay .cardBlock {
+  display: block;
 }
 /*-------------------------------------------
 		Menu
 -------------------------------------------*/
+.menu {
+  visibility: hidden;
+}
 .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  width: 185px;
 }
-.menu li {
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10.5px 11px;
+  background-color: #005555;
   display: block;
-  width: 100px;
-  background-color: green;
-  text-color: white;
+}
+.menu ul li a:visited,
+.menu ul li a:hover,
+.menu ul li .current {
+  color: white;
 }
