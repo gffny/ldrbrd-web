@@ -1,0 +1,56 @@
+<div class="scorecard">
+	<div class="scorecardOverview">
+		<div class="scorecardImage">{{scorecard.grossScore}}</div>
+			<!-- if course.hasImage else score in bold -->
+			 <!-- to be calculated in the controller for now but should be pushed into the rest api -->
+		<div class="scorecardCourseInfo">
+			<h3>{{scorecard.numberOfHoles}} holes at {{scorecard.courseName}}</h3>
+			<span class="title">Tees</span><span>{{scorecard.teesPlayedOffColour}}</span>
+			<span class="title">Tee Time</span><span>{{scorecard.scorecardDateDT | date: 'dd MMMM yyyy @ HH:mm:ss'}}</span>
+			<span class="title">Scoring Golfer</span><span>{{scorecard.scoringGolferName}}</span>
+		</div>
+	</div>
+	<div class="scorecardDetail">
+		<div class="scorecardScoreTable">
+			<table>
+				<thead>
+					<!-- hole number -->
+					<th>Hole</th>
+					<td ng-repeat="(k, v) in scorecard.holeScoreArray track by $index">
+						{{k+1}}
+					</td>
+				</thead>
+				<tbody>
+					<!-- hole index -->
+					<tr>
+						<th>Distance</th>
+						<td ng-repeat="(k, v) in scorecard.holeScoreArray track by $index">
+							{{courseData['7f500b91-cec5-4573-921a-ac2d3c2ca1af'][k].holeDistance}}
+						</td>
+					</tr>
+					<!-- hole distance -->
+					<tr>
+						<th>Index</th>
+						<td ng-repeat="(k, v) in scorecard.holeScoreArray track by $index">
+							{{courseData['7f500b91-cec5-4573-921a-ac2d3c2ca1af'][k].holeIndex}}
+						</td>
+					</tr>
+					<tr>
+						<th>Par</th>
+						<td ng-repeat="(k, v) in scorecard.holeScoreArray track by $index">
+							{{courseData['7f500b91-cec5-4573-921a-ac2d3c2ca1af'][k].holePar}}
+						</td>
+					</tr>
+					<tr>
+						<th>Score</th>
+						<td ng-repeat="(k, v) in scorecard.holeScoreArray track by $index">
+							{{v}}
+						</td>
+					</tr>
+				</tbody>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+	

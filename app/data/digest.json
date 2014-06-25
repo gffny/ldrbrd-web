@@ -1,71 +1,105 @@
 {
-    "golferProfile": {
-        "id": "8ab69aed-cd83-4a44-81ec-f04d3e61cb2d",
-        "profileHandle": "gffny",
-        "firstName": "John",
-        "lastName": "Gaffney",
-        "emailAddress": "john@gffny.com",
-        "profileImageRef": "http://distilleryimage7.s3.amazonaws.com/26adcca2488511e3aec5128fd569807c_8.jpg",
-        "lastLogin": 1394388398000,
-        "failedLoginAttemptsCount": 0,
-        "handicap": 13,
-        "golfBag": [],
-        "handedness": "RIGHT",
-        "handDominanceValue": "RIGHT",
-        "enabled": true,
-        "lastLoginDT": 1394388398000
+  "golferProfile": {
+    "id": "8ab69aed-cd83-4a44-81ec-f04d3e61cb2d",
+    "profileHandle": "gffny",
+    "firstName": "John",
+    "lastName": "Gaffney",
+    "emailAddress": "john@gffny.com",
+    "profileImageRef": "http:\/\/distilleryimage7.s3.amazonaws.com\/26adcca2488511e3aec5128fd569807c_8.jpg",
+    "lastLogin": 1394388398000,
+    "failedLoginAttemptsCount": 0,
+    "handicap": 13,
+    "golfBag": [
+      
+    ],
+    "handedness": "RIGHT",
+    "handDominanceValue": "RIGHT",
+    "enabled": true,
+    "lastLoginDT": 1394388398000
+  },
+  "favouriteCourseList": [
+    {
+      "id": "7f500b91-cec5-4573-921a-ac2d3c2ca1af",
+      "courseName": "test course",
+      "club": {
+        "id": "50bd0bad-83c2-4834-a616-f0d7d45dd27c",
+        "clubName": "test club",
+        "address": null,
+        "managerName": null,
+        "dressCodePolicy": null,
+        "greenKeeperName": null,
+        "proGolferName": null
+      },
+      "teeColour": "WHITE",
+      "slopeIndex": 114.5,
+      "par": 72,
+      "courseHoleList": null,
+      "courseImageRef": "test course image reference",
+      "nineHole": false
+    }
+  ],
+  "lastXScorecardList": [
+    {
+      "id": "a10af2db-d0ad-4f37-a906-f27aa5d8d35f",
+      "golferName": "John Gaffney",
+      "scoringGolferName": "John Gaffney",
+      "courseName": "test club test course",
+      "competitionRound": {
+        "id": "fe50c4b6-13a5-4da8-97fa-e1fd0556146c",
+        "roundDate": 1394398449000,
+        "roundNumber": 1,
+        "roundDateDT": 1394398449000
+      },
+      "scorecardNotes": "",
+      "scorecardDate": 1394596800000,
+      "handicap": 13,
+      "grossScore": 80,
+      "teesPlayedOffCode": "",
+      "teesPlayedOffColour": "White",
+      "numberOfHoles": 18,
+      "scorecardDateDT": 1394596800000,
+      "holeScoreArray": [
+            4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+          ]
     },
-    "favouriteCourseList": [
-        {
-            "id": "7f500b91-cec5-4573-921a-ac2d3c2ca1af",
-            "courseName": "test course",
-            "club": {
-                "id": "50bd0bad-83c2-4834-a616-f0d7d45dd27c",
-                "clubName": "test club",
-                "address": null,
-                "managerName": null,
-                "dressCodePolicy": null,
-                "greenKeeperName": null,
-                "proGolferName": null
-            },
-            "teeColour": "WHITE",
-            "slopeIndex": 114.5,
-            "par": 72,
-            "courseHoleList": null,
-            "courseImageRef": "test course image reference",
-            "nineHole": false
-        }
-    ],
-    "lastXScorecardList": [
-        {
-            "id": "a10af2db-d0ad-4f37-a906-f27aa5d8d35f",
-            "golferName": "John Gaffney",
-            "scoringGolferName": "John Gaffney",
-            "courseName": "test club test course",
-            "competitionRound": {
-                "id": "fe50c4b6-13a5-4da8-97fa-e1fd0556146c",
-                "roundDate": 1394398449000,
-                "roundNumber": 1,
-                "roundDateDT": 1394398449000
-            },
-            "scorecardNotes": "",
-            "scorecardDate": 1394596800000,
-            "handicap": 13,
-            "grossScore": 0,
-            "teesPlayedOffCode": "",
-            "teesPlayedOffColour": "",
-            "numberOfHoles": 18,
-            "scorecardDateDT": 1394596800000
-        }
-    ],
-    "upcomingCompetitionRegistrationList": [
-        {
-            "id": "a79ebb0e-98a9-4a6d-bb47-74a1a2d3adc4",
-            "competition": {
-                "id": "b27176ee-704b-48f7-9411-db11e0696352"
-            },
-            "competitionHandicap": 13
-        }
-    ],
-    "upcomingNonCompetitionRoundList": []
+    {
+      "id": "a10af2db-d0ad-4f37-a906-f27aa5d8d35g",
+      "golferName": "John Gaffney",
+      "scoringGolferName": "John Gaffney",
+      "courseName": "test club test course",
+      "competitionRound": {
+        "id": "fe50c4b6-13a5-4da8-97fa-e1fd0556146c",
+        "roundDate": 1394398449000,
+        "roundNumber": 1,
+        "roundDateDT": 1394398449000
+      },
+      "scorecardNotes": "",
+      "scorecardDate": 1394596800000,
+      "handicap": 13,
+      "grossScore": 80,
+      "teesPlayedOffCode": "",
+      "teesPlayedOffColour": "White",
+      "numberOfHoles": 18,
+      "scorecardDateDT": 1394596800000,
+      "holeScoreArray": [
+            4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+          ]
+    }
+  ],
+  "upcomingCompetitionRegistrationList": [
+    {
+      "id": "a79ebb0e-98a9-4a6d-bb47-74a1a2d3adc4",
+      "competition": {
+        "id": "b27176ee-704b-48f7-9411-db11e0696352"
+      },
+      "competitionHandicap": 13
+    }
+  ],
+  "upcomingNonCompetitionRoundList": [
+    {
+        "id":28,"Title":"Sweden"
+    }, {
+        "id":56,"Title":"USA"
+    }
+  ]
 }
