@@ -73,13 +73,27 @@
 	<!-- scorecards -->
 	<div name="profileScorecard">
 		<h3>Recent Scorecards</h3>
-		<div class="scorecard" ng-repeat="scorecard in scorecardArray">
-			<div class="scorecardOverview"><span ng-click="toggleScorecard(scorecard.id, '2')">+</span> Shot {{scorecard.grossScore}} @ {{scorecard.courseName}} off {{scorecard.teesPlayedOffColour}} tees</div>
+		<div class="scorecard">
+			<div class="scorecardOverview" ng-repeat="scorecard in scorecardArray">
+				<span ng-click="toggleScorecard(scorecard.id, '2')">+ Shot {{scorecard.grossScore}} @ {{scorecard.courseName}} off {{scorecard.teesPlayedOffColour}} tees</span>
+			</div>
 			<div class="scorecardDetail" ng-show="scorecardInView['{{scorecard.id}}']">
-				<span class="scorecardDetailRow"><span class="title">Course</span><span>{{scorecard.courseName}}</span></span>
-				<span class="scorecardDetailRow"><span class="title">Gross</span><span>{{scorecard.grossScore}}</span></span>
-				<span class="scorecardDetailRow"><span class="title">Tee</span><span>{{scorecard.teesPlayedOffColour}}</span></span>
-				<span class="scorecardDetailRow"><span class="title">Handicap</span><span>{{scorecard.handicap}}</span></span>
+				<span class="scorecardDetailRow">
+					<span class="title">Course</span>
+					<span>{{scorecard.courseName}}</span>
+				</span>
+				<span class="scorecardDetailRow">
+					<span class="title">Gross</span>
+					<span>{{scorecard.grossScore}}</span>
+				</span>
+				<span class="scorecardDetailRow">
+					<span class="title">Tee</span>
+					<span>{{scorecard.teesPlayedOffColour}}</span>
+				</span>
+				<span class="scorecardDetailRow">
+					<span class="title">Handicap</span>
+					<span>{{scorecard.handicap}}</span>
+				</span>
 				<span><a href="#/scorecard/{{scorecard.id}}">[analyse]</a></span>
 			</div>
 		</div>
@@ -89,12 +103,26 @@
 		<h3>Favourite Courses</h3>
 		<div class="course" ng-repeat="course in favouriteCourseArray">
 			<div class="courseOverview">
-			<span ng-click="toggleFavouriteCourse(course.id, '2')">+</span> {{course.teeColour}} Tees at {{course.courseName}}<span ng-if="course.club && course.club.clubName"> on {{course.club.clubName}}</span></div>
+				<span ng-click="toggleFavouriteCourse(course.id, '2')">+</span> 
+				{{course.teeColour}} Tees at {{course.courseName}}
+				<span ng-if="course.club && course.club.clubName"> on {{course.club.clubName}}</span>
+			</div>
 			<div class="courseDetail" ng-show="favouriteCourseInView['{{course.id}}']">
-				<span class="courseDetailRow"><span class="title">Course Name</span><span>{{course.courseName}}</span>
-				<span class="courseDetailRow"><span class="title">Par</span><span>{{course.par}}</span>
-				<span class="courseDetailRow"><span class="title">Slope Index</span><span>{{course.slopeIndex}}</span>
-				<span><a href="#/course/{{course.id}}">[more details]</a></span>
+				<span class="courseDetailRow">
+					<span class="title">Course Name</span>
+					<span>{{course.courseName}}</span>
+					<span class="courseDetailRow">
+						<span class="title">Par</span>
+						<span>{{course.par}}</span>
+					</span>
+					<span class="courseDetailRow">
+						<span class="title">Slope Index</span>
+						<span>{{course.slopeIndex}}</span>
+					</span>
+					<span>
+						<a href="#/course/{{course.id}}">[more details]</a>
+					</span>
+				</span>
 			</div>
 		</div>
 	</div>

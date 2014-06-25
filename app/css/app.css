@@ -55,7 +55,7 @@ body {
   display: block;
 }
 .profile .profileSummaryCard {
-  height: 400px;
+  height: 200px;
   padding-left: 15px;
   vertical-align: top;
   float: left;
@@ -68,6 +68,9 @@ body {
 }
 .profile .scorecard {
   display: inline-block;
+}
+.profile .scorecard .scorecardViewOverview {
+  display: inline;
 }
 /*-------------------------------------------
 		Menu
@@ -96,17 +99,21 @@ body {
 /*-------------------------------------------
 		Scorecard
 -------------------------------------------*/
-.scorecard {
+.scorecardView {
   display: inline-block;
   background-color: #EEEEEE;
   border-radius: 10px;
   padding: 25px;
   margin-left: 100px;
 }
-.scorecard .scorecardOverview {
+.scorecardView .scorecardViewOverview {
   display: inline;
 }
-.scorecard .scorecardOverview .scorecardImage {
+.scorecardView .scorecardViewOverview h3 {
+  margin-top: 0px;
+}
+.scorecardView .scorecardViewOverview .scorecardImage {
+  float: right;
   height: 80px;
   width: 80px;
   font-size: 40px;
@@ -116,26 +123,42 @@ body {
   border-radius: 10px;
   background-color: green;
 }
-.scorecard .scorecardOverview .scorecardCourseInfo span {
+.scorecardView .scorecardViewOverview .scorecardCourseInfo span {
   display: block;
 }
-.scorecard .scorecardDetail .scorecardScoreTable table {
+.scorecardView .scorecardViewOverview .scorecardCourseInfo span span {
+  display: inline-block;
+}
+.scorecardView .scorecardViewOverview .scorecardCourseInfo span.title {
+  font-weight: bold;
+  margin-right: 10px;
+  width: 100px;
+  text-align: right;
+}
+.scorecardView .scorecardViewDetail .scorecardViewTable h3 {
+  background-color: #ffffff;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 25px;
+}
+.scorecardView .scorecardViewDetail .scorecardViewTable table {
   height: 100px;
   background-color: #ffffff;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border: 3px;
 }
-.scorecard .scorecardDetail .scorecardScoreTable table tr {
+.scorecardView .scorecardViewDetail .scorecardViewTable table tr {
   height: 30px;
 }
-.scorecard .scorecardDetail .scorecardScoreTable table th {
+.scorecardView .scorecardViewDetail .scorecardViewTable table th {
   background-color: ffffff;
   text-align: right;
   padding-right: 5px;
   width: 80px;
 }
-.scorecard .scorecardDetail .scorecardScoreTable table td {
+.scorecardView .scorecardViewDetail .scorecardViewTable table td {
   width: 30px;
   text-align: center;
   vertical-align: middle;

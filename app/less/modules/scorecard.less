@@ -1,17 +1,22 @@
 /*-------------------------------------------
 		Scorecard
 -------------------------------------------*/
-.scorecard {
+.scorecardView {
 	display:inline-block;
 	background-color: #EEEEEE;
 	border-radius: 10px;
 	padding: 25px;
 	margin-left: 100px;
 
-	.scorecardOverview {
+	.scorecardViewOverview {
 		display:inline;
 
+		h3 {
+			margin-top: 0px;
+		}
+
 		.scorecardImage {
+			float: right;
 			height: 80px;
 			width: 80px;
 			font-size: 40px;
@@ -19,19 +24,36 @@
 			text-align: center;
 			vertical-align: middle;	
 			border-radius: 10px;
-
 			background-color: green;
 		}
 
 		.scorecardCourseInfo {
+
 			span {
 				display: block;
+				span {
+					display: inline-block;
+				}
+			}
+			span.title {	
+				font-weight: bold;	
+				margin-right: 10px;
+				width: 100px;
+				text-align: right;
 			}
 		}
 	}
 
-	.scorecardDetail {
-		.scorecardScoreTable {
+	.scorecardViewDetail {
+		.scorecardViewTable {
+			h3 {
+				background-color: #ffffff;
+				margin-bottom: 0px;
+				padding-bottom: 10px;
+				padding-top: 10px;
+				padding-left: 25px;
+			}
+
 			table {
 				height: 100px;
 				background-color: #ffffff;
