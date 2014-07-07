@@ -1,0 +1,45 @@
+<div class="register">
+	<div name="intro">
+		Welcome to Leaderboard; we hope you find the registration process easier than the game of golf.
+	</div>
+
+	<form>
+		<div name="general">
+			<span>
+				<label for="firstName">First Name</label>
+				<input id="firstName" ng-model="golfer.firstName"  placeholder="First Name (John)" />
+			</span>
+
+			<span>
+				<label for="lastName">Last Name</label>
+				<input id="lastName" ng-model="golfer.lastName"  placeholder="Last Name (Smith)" />
+			</span>
+
+			<span>
+				<label for="profileName">Profile Name</label>
+				<input id="profileName" ng-model="golfer.profileName"  placeholder="Profile Name (smithy74)" />
+			</span>
+
+			<span>
+				<label for="city">City</label>
+				<input id="city" ng-model="golfer.city"  placeholder="City (Cambridge)" />
+			</span>
+
+			<span>
+				<label for="state">State</label>
+				<input id="state" ng-model="golfer.state"  placeholder="State (MA)" />
+			</span>
+		</div>
+
+		<div name="golf">
+			<label for="handicap">Handicap</label>
+			<input id="handicap" ng-model="golfer.handicap"  placeholder="Handicap (0 - 45)" />
+		</div>
+
+		<div class="formButton">
+			<span><a href="#/home">Cancel</a></span>
+			<span ng-click="register()">Register</span>
+		</div>
+	</form>
+
+</div>

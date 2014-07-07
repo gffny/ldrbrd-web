@@ -1,0 +1,24 @@
+<div class="leaderboard">
+	<table>
+		<thead>
+			<tr>
+				<td>Pos</td>
+				<td>Player</td>
+				<td>Thru</td>
+				<td>To Par</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="player in leaderboard">
+				<td class="pos">{{player.pos}}</td>
+				<td>{{player.name}}</td>
+				<td class="value">{{player.thru}}</td>
+				<td class="value">
+					<span class="overPar" ng-if="player.toPar > 0">{{player.toPar}}</span>
+					<span class="par" ng-if="player.toPar == 0">{{player.toPar}}</span>
+					<span class="belowPar" ng-if="player.toPar < 0">{{player.toPar}}</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

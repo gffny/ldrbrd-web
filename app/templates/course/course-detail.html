@@ -1,0 +1,114 @@
+<div class="course">
+	<div name="courseDetail">
+		<!-- image -->
+		<div class="courseSummaryCard" ng-if="course.courseImageRef">
+			<img ng-src="{{course.courseImageRef}}" />
+		</div>
+		<!-- names -->
+		<div class="courseSummaryCard" ng-if="course.firstName && course.lastName && course.courseHandle">
+			<div>
+				<h3>Name Details</h3>
+				<!-- name -->
+				<span class="courseBlock">
+					<span class="title">Course Name</span>
+					<span>{{course.courseName}} @ {{course.clubName}}</span>
+				</span>
+				<!-- handle -->
+				<span class="courseBlock">
+					<span class="title">course Handle</span>
+					<span>{{course.courseHandle}}</span>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="courseViewDetail" ng-click="toogleView()">
+		<div class="abbreviatedView" ng-show="abbreviatedView">
+			<h3>Course</h3>
+			<table>
+				<tbody>
+					<!-- hole number -->
+					<tr>
+						<th>Hole</th>
+						<!--   -->
+						<td ng-mouseover="toggleHoleView(hole, $index)" ng-mouseleave="toggleHoleView(hole, $index)" ng-class="{selected: tableClass[$index]}" ng-repeat="hole in course">
+							{{hole.holeNumber}}
+						</td>
+					</tr>
+
+					<!-- hole index -->
+					<tr>
+						<th>Distance</th>
+						<td ng-mouseover="toggleHoleView(hole, $index)" ng-mouseleave="toggleHoleView(hole, $index)" ng-class="{selected: tableClass[$index]}" ng-repeat="hole in course">
+							{{hole.holeDistance}}
+						</td>
+					</tr>
+					<!-- hole distance -->
+					<tr>
+						<th>Index</th>
+						<td ng-mouseover="toggleHoleView(hole, $index)" ng-mouseleave="toggleHoleView(hole, $index)" ng-class="{selected: tableClass[$index]}" ng-repeat="hole in course">
+							{{hole.holeIndex}}
+						</td>
+					</tr>
+					<!-- hole par -->
+					<tr>
+						<th>Par</th>
+						<td ng-mouseover="toggleHoleView(hole, $index)" ng-mouseleave="toggleHoleView(hole, $index)" ng-class="{selected: tableClass[$index]}" class="extended" ng-repeat="hole in course">
+							{{hole.holePar}}
+						</td>
+					</tr>
+					<tr ng-show="showHoleNote">
+						<th class="extended">Notes</th>
+						<td ng-mouseover="toggleHoleView(hole, $index)" ng-mouseleave="toggleHoleView(hole, $index)" ng-class="{selected: tableClass[$index]}" ng-repeat="hole in course">
+							{{hole.holeNote}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="fullView" ng-hide="abbreviatedView">
+			<h3>Course</h3>
+			<table>
+				<thead>
+					<!-- table headers -->
+					<th>Hole</th>
+					<th>Distance</th>
+					<th>Index</th>
+					<th>Par</th>
+					<th class="extended">Description</th>
+					<th class="extended" ng-show="showHoleNote">Notes</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="hole in course">
+						<td>
+							{{hole.holeNumber}}
+						</td>
+						<td>
+							{{hole.holeDistance}}
+						</td>
+						<td>
+							{{hole.holeIndex}}
+						</td>
+						<td>
+							{{hole.holePar}}
+						</td>
+						<td class="extended">
+							{{hole.holeDescription}}
+						</td>
+						<td class="extended" ng-show="showHoleNote">
+							{{hole.holeNote}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="mouseOverHoleView" ng-show="showMouseOverHoleView">
+			<h4>Hole {{mohv.holeNumber}}</h4>
+			<div class="courseHoleImage"><img ng-src="{{mohv.holeImageURL}}" height="253px" width="150px" ng-alt="{{mohv.holeDescripton}}"/></div>
+			<div class="courseHoleOverview">
+				Distance {{mohv.holeDistance}} 
+				Index {{mohv.holeIndex}} 
+			</div>
+		</div>
+	</div>
+
+</div>

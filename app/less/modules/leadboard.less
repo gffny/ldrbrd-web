@@ -1,0 +1,87 @@
+/*-------------------------------------------
+		Leaderboard
+
+Light Blue	8FBDD9
+Dark Blue	03658C
+Light Green	78A83C
+Sandy		E3A533
+Dark Green	326D23
+-------------------------------------------*/
+/*
+<div class="leaderboard">
+	<table>
+		<thead>
+			<tr>
+				<td>Pos</td>
+				<td>Player</td>
+				<td>Thru</td>
+				<td>To Par</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="player in leaderboard">
+				<td class="pos">{{player.pos}}</td>
+				<td>{{player.name}}</td>
+				<td>{{player.thru}}</td>
+				<td>
+					<span class="overPar" ng-if="player.toPar > 0">{{player.toPar}}</span>
+					<span class="par" ng-if="player.toPar == 0">{{player.toPar}}</span>
+					<span class="belowPar" ng-if="player.toPar < 0">{{player.toPar}}</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+*/
+
+.leaderboard {
+		width: 400px;
+		display: table-caption;
+
+		border-radius: 15px;
+		margin-left: 30px;
+		margin-top: 15px;
+		margin-right: 30px;
+
+		padding: 50px;
+
+		//TODO Change to an opacity
+		background-color: #FFFFFF;
+
+		table {
+
+			thead {
+				color: #326D23;
+				td.value {
+					width: 35px;
+				}
+			}
+
+
+				tr {
+					margin-top: 5px;
+
+					td {
+						/*margin-right: 10px;*/
+						padding:5px;
+					}
+				}
+
+			.pos {
+				text-align: right;
+			}
+
+			.value {
+				text-align: center;
+			}
+
+			.belowPar {
+				color: #326D23;
+			}
+
+			.overPar {
+				color: #E3A533;
+			}
+		}
+
+}

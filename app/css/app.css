@@ -6,7 +6,7 @@ body {
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 50%;
-  background-image: url(../img/bg/oconnorBg1750x623.png), -webkit-gradient(linear, left top, left bottom, from(#6cab26), to(#6ceb86));
+  background-image: url(../img/bg/oconnorBg1750x623.png), -webkit-gradient(linear, left top, left bottom, from(#8fbdd9), to(#6ceb86));
   /* Saf4+, Chrome */
   background-image: url(../img/bg/oconnorBg1750x623.png), -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 67%, #ffffff 70%, #ffffff 100%);
   /* FF3.6+ */
@@ -25,6 +25,13 @@ body {
   width: 100%;
   height: 100%;
 }
+/*
+ *	Light Blue	8FBDD9
+ *	Dark Blue	03658C
+ *	Light Green	78A83C
+ *	Sandy		E3A533
+ *	Dark Green	326D23
+ */
 /*-------------------------------------------
 		Profile
 -------------------------------------------*/
@@ -76,25 +83,108 @@ body {
 		Menu
 -------------------------------------------*/
 .menu {
-  visibility: hidden;
+  border-bottom: double;
+  border-width: 2px;
+  border-color: #005555;
+  display: inline-flex;
+  width: 800px;
+  /*	MENU LAYOUT
+	CSS from http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu
+	<nav class="menuDropDown">
+		<ul>
+			<li><a class="menuDropDown">menu</a>
+				<ul>
+					<li class="menuDropDownTop"><a href="#/profile">Golf Profile</a></li>
+					<li class="menuDropDownBottom"><a href="#/scorecard">Scorecards</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+*/
 }
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 185px;
+.menu span.menuTitle {
+  margin-left: 20px;
+  font-family: "Big Caslon";
+  font-size: 40px;
 }
-.menu ul li a {
-  text-decoration: none;
-  color: white;
-  padding: 10.5px 11px;
-  background-color: #005555;
+.menu span.menuProfileName {
+  margin-left: 50px;
+  margin-top: 12px;
+  margin-right: 100px;
+  font-size: 25px;
+  font-family: "Heiti SC";
+  vertical-align: middle;
+}
+.menu nav {
+  margin-top: 17px;
+}
+.menu nav ul {
+  /*			background: #efefef; 
+			background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+			background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+			background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); */
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+  padding: 0px;
+  border-radius: 10px;
+  list-style: none;
+  position: relative;
+  display: inline-table;
+}
+.menu nav ul ul {
+  display: none;
+}
+.menu nav ul li:hover > ul {
   display: block;
+  float: right;
 }
-.menu ul li a:visited,
-.menu ul li a:hover,
-.menu ul li .current {
-  color: white;
+.menu nav ul li {
+  float: left;
+}
+.menu nav ul li:hover {
+  background: #4b545f;
+  background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+  background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+  background: -webkit-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+  border-radius: 12px 12px 0px 0px;
+}
+.menu nav ul li:hover a {
+  color: #fff;
+}
+.menu nav ul li input {
+  width: 130px;
+  border-radius: 8px;
+  margin: 8px 16px 8px;
+}
+.menu nav ul li a {
+  display: block;
+  padding: 10px;
+  color: #757575;
+  text-decoration: none;
+}
+.menu nav ul ul {
+  background: #5f6975;
+  border-radius: 0px;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+}
+.menu nav ul ul li {
+  float: none;
+  border-top: 1px solid #6b727c;
+  border-bottom: 1px solid #575f6a;
+  position: relative;
+}
+.menu nav ul ul li a {
+  padding: 10px 25px;
+  color: #fff;
+}
+.menu nav ul ul li a:hover {
+  background: #4b545f;
+}
+.menu nav ul:after {
+  content: "";
+  clear: both;
+  display: block;
 }
 /*-------------------------------------------
 		Scorecard
@@ -162,4 +252,264 @@ body {
   width: 30px;
   text-align: center;
   vertical-align: middle;
+}
+/*-------------------------------------------
+		Course
+-------------------------------------------*/
+.course .courseViewDetail {
+  display: inline-block;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  padding: 25px;
+  margin-left: 100px;
+}
+.course .courseViewDetail h3 {
+  margin-top: 0px;
+}
+.course .courseViewDetail table {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 3px;
+}
+.course .courseViewDetail table th {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.course .courseViewDetail table tr {
+  height: 30px;
+}
+.course .courseViewDetail .abbreviatedView table th {
+  text-align: right;
+  padding-right: 5px;
+  width: 80px;
+}
+.course .courseViewDetail .abbreviatedView table td {
+  width: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+.course .courseViewDetail .abbreviatedView table td.selected {
+  background-color: #588766;
+}
+.course .courseViewDetail .fullView table td {
+  text-align: left;
+  width: 30px;
+  vertical-align: middle;
+}
+.course .courseViewDetail .fullView table th {
+  width: 30px;
+  padding-right: 10px;
+}
+.course .courseViewDetail .fullView table .extended {
+  width: 300px;
+}
+.course .courseViewDetail .mouseOverHoleView {
+  background-color: #588766;
+}
+.course .courseViewDetail .mouseOverHoleView .courseHoleImage {
+  float: right;
+}
+/*-------------------------------------------
+		Register
+-------------------------------------------*/
+.register {
+  /*
+ *	Light Blue	8FBDD9
+ *	Dark Blue	03658C
+ *	Light Green	78A83C
+ *	Sandy		E3A533
+ *	Dark Green	326D23
+ */
+}
+.register form {
+  width: 300px;
+  display: table-caption;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 15px;
+  margin-right: 30px;
+  padding: 50px;
+  background-color: #FFFFFF;
+}
+.register form .formButton {
+  margin: 10px 0px 0px 50px;
+  display: inline-flex;
+}
+.register form .formButton span {
+  margin: 5px;
+  background-color: #03658C;
+  padding: 10px;
+  border-radius: 15px;
+  color: #428bca;
+}
+.register form .formButton a:hover,
+.register form .formButton a:active,
+.register form .formButton span:active,
+.register form .formButton span:hover {
+  background-color: #8FBDD9;
+  text-decoration: none;
+}
+.register form .formButton a {
+  color: #428bca;
+}
+.register form label {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.register form input {
+  border-radius: 5px;
+  width: 200px;
+  background-color: #8FBDD9;
+  color: #FFFFFF;
+  margin-top: 1px;
+}
+.register form div {
+  display: inherit;
+}
+/*-------------------------------------------
+		Home
+
+Light Blue	8FBDD9
+Dark Blue	03658C
+Light Green	78A83C
+Sandy		E3A533
+Dark Green	326D23
+-------------------------------------------*/
+.home {
+  background-color: #8FBDD9;
+  width: 300px;
+  border-radius: 15px;
+  margin-left: 60px;
+  margin-top: 30px;
+  padding: 15px;
+}
+/*-------------------------------------------
+		Auth
+
+Light Blue	8FBDD9
+Dark Blue	03658C
+Light Green	78A83C
+Sandy		E3A533
+Dark Green	326D23
+-------------------------------------------*/
+.auth form {
+  width: 300px;
+  display: table-caption;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 15px;
+  margin-right: 30px;
+  padding: 50px;
+  background-color: #FFFFFF;
+}
+.auth form .formButton {
+  margin: 10px 0px 0px 40px;
+  display: inline-flex;
+  width: 200px;
+}
+.auth form .formButton span {
+  width: 150px;
+  margin: 5px 0px 5px 0px;
+  background-color: #03658C;
+  padding: 10px;
+  border-radius: 15px;
+  color: #428bca;
+}
+.auth form .formButton span.twoButton {
+  width: 70px;
+  margin-right: 10px;
+}
+.auth form .formButton a:hover,
+.auth form .formButton a:active,
+.auth form .formButton span:active,
+.auth form .formButton span:hover {
+  background-color: #8FBDD9;
+  text-decoration: none;
+}
+.auth form .formButton a {
+  color: #428bca;
+}
+.auth form label {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.auth form input {
+  border-radius: 5px;
+  width: 200px;
+  background-color: #8FBDD9;
+  color: #FFFFFF;
+  margin-top: 1px;
+}
+.auth form div {
+  display: inherit;
+}
+/*-------------------------------------------
+		Leaderboard
+
+Light Blue	8FBDD9
+Dark Blue	03658C
+Light Green	78A83C
+Sandy		E3A533
+Dark Green	326D23
+-------------------------------------------*/
+/*
+<div class="leaderboard">
+	<table>
+		<thead>
+			<tr>
+				<td>Pos</td>
+				<td>Player</td>
+				<td>Thru</td>
+				<td>To Par</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="player in leaderboard">
+				<td class="pos">{{player.pos}}</td>
+				<td>{{player.name}}</td>
+				<td>{{player.thru}}</td>
+				<td>
+					<span class="overPar" ng-if="player.toPar > 0">{{player.toPar}}</span>
+					<span class="par" ng-if="player.toPar == 0">{{player.toPar}}</span>
+					<span class="belowPar" ng-if="player.toPar < 0">{{player.toPar}}</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+*/
+.leaderboard {
+  width: 400px;
+  display: table-caption;
+  border-radius: 15px;
+  margin-left: 30px;
+  margin-top: 15px;
+  margin-right: 30px;
+  padding: 50px;
+  background-color: #FFFFFF;
+}
+.leaderboard table thead {
+  color: #326D23;
+}
+.leaderboard table thead td.value {
+  width: 35px;
+}
+.leaderboard table tr {
+  margin-top: 5px;
+}
+.leaderboard table tr td {
+  /*margin-right: 10px;*/
+  padding: 5px;
+}
+.leaderboard table .pos {
+  text-align: right;
+}
+.leaderboard table .value {
+  text-align: center;
+}
+.leaderboard table .belowPar {
+  color: #326D23;
+}
+.leaderboard table .overPar {
+  color: #E3A533;
 }
